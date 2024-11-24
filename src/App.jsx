@@ -1,7 +1,7 @@
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { Navbar } from "@/widgets/layout";
 import routes from "@/routes";
-
+import { ChatbotOverlay } from "@/widgets/ChatbotOverlay";
 
 function App() {
   const { pathname } = useLocation();
@@ -21,6 +21,7 @@ function App() {
         )}
         <Route path="*" element={<Navigate to="/home" replace />} />
       </Routes>
+      <ChatbotOverlay />
     </>
   );
 }
